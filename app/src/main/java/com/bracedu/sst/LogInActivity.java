@@ -2,7 +2,9 @@ package com.bracedu.sst;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -14,5 +16,9 @@ public class LogInActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+    }
+
+    public void logInBTN(View view) {
+        startActivity(new Intent(LogInActivity.this,MainActivity.class));
     }
 }

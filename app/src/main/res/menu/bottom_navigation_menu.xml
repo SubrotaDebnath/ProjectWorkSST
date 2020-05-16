@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottomNavHome"
+        android:icon="@drawable/home_icon_bw"
+        android:title="@string/home"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"/>
+    <item
+        android:id="@+id/bottomNavNotification"
+        android:icon="@drawable/bell_icon_bw"
+        android:title="@string/notification"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"/>
+    <item
+        android:id="@+id/bottomNavProfile"
+        android:icon="@drawable/user_icon_bw"
+        android:title="@string/profile"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"/>
+
+</menu>

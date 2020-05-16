@@ -6,4 +6,10 @@
     <color name="textColorWhite">#FFFFFF</color>
     <color name="inputTextColor">#1b1f25</color>
     <color name="loginButtonColor">#213dff</color>
+    <color name="bottomNavSelectionColor">#f31891</color>
+    <color name="bottomNavUnselectColor">#bebec5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightTextColor">#72777e</color>
+    <color name="logoutTextColor">#26292b</color>
+
 </resources>
