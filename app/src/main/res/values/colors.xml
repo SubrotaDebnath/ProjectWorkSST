@@ -11,5 +11,13 @@
     <color name="white">#FFFFFF</color>
     <color name="lightTextColor">#72777e</color>
     <color name="logoutTextColor">#26292b</color>
+    <color name="homeVisitColor">#171920</color>
+    <color name="attendanceProgressColor">#ffcc20</color>
+    <color name="visitedProgressColor">#7bd6ff</color>
+    <color name="environmentProgressColor">#a67bff</color>
+    <color name="assessmentProgressColor">#08d144</color>
+    <color name="progressTextColor">#403b49</color>
+    <color name="tabTextColor">#2d353e</color>
+    <color name="black">#000000</color>
 
 </resources>

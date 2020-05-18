@@ -1,14 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/home_background_img"
     tools:context=".fragment.HomeMainFragment">
+   <LinearLayout
+       android:id="@+id/userNameSection"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="23dp"
+       android:layout_marginLeft="20dp"
+       android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="15sp"
+          android:fontFamily="sans-serif"
+          android:textStyle="normal"
+          android:textColor="@color/white"
+          android:text="Hi " />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="15sp"
+          android:fontFamily="sans-serif"
+          android:textStyle="normal"
+          android:textColor="@color/white"
+          android:text="Monirul" />
+   </LinearLayout>
+   <TextView
+       android:id="@+id/homeHeadingText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/userNameSection"
+       android:layout_marginTop="7dp"
+       android:layout_marginLeft="20dp"
+       android:textSize="22sp"
+       android:fontFamily="sans-serif-black"
+       android:textStyle="normal"
+       android:textColor="#ffffff"
+       android:text="@string/homeHeadingString"/>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/visitSchoolCard"
+       android:layout_width="175dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/homeHeadingText"
+       android:layout_marginTop="25dp"
+       android:layout_marginLeft="20dp"
+       app:cardCornerRadius="10dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="15sp"
+             android:fontFamily="sans-serif-medium"
+             android:textStyle="normal"
+             android:textColor="@color/homeVisitColor"
+             android:text="@string/visit_school"
+             android:padding="15dp"/>
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="50dp"
+             android:layout_gravity="center"
+             android:src="@drawable/right_angle_icon"
+             android:contentDescription="TODO" />
+      </LinearLayout>
+   </androidx.cardview.widget.CardView>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/progressCard"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/visitSchoolCard"
+       app:cardCornerRadius="10dp"
+       android:layout_marginBottom="-10dp"
+       android:padding="10dp"
+       android:layout_marginTop="30dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+               <ProgressBar
+                   android:id="@+id/progressWheel"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="55dp"
+                   android:layout_height="52dp"
+                   android:max="133"
+                   android:progress="17"
+                   android:secondaryProgress="0"
+                   android:indeterminate="false"
+                   android:progressDrawable="@drawable/attendance_arc_progressbar" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="36dp"
+                   android:gravity="center"
+                   android:layout_above="@id/progressWheel"
+                   android:layout_below="@id/progressWheel"
+                   android:layout_alignLeft="@id/progressWheel"
+                   android:layout_alignTop="@id/progressWheel"
+                   android:layout_alignRight="@id/progressWheel"
+                   android:layout_alignBottom="@id/progressWheel"
+                   android:background="@android:color/transparent"
+                   android:text="17%"
+                   android:textColor="@color/progressTextColor"
+                   android:textSize="15sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+               <ProgressBar
+                   android:id="@+id/progressWheel2"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="55dp"
+                   android:layout_height="52dp"
+                   android:max="133"
+                   android:progress="24"
+                   android:secondaryProgress="0"
+                   android:indeterminate="false"
+                   android:progressDrawable="@drawable/visited_arc_progressbar" />
 
-</FrameLayout>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="36dp"
+                   android:gravity="center"
+                   android:layout_above="@id/progressWheel2"
+                   android:layout_below="@id/progressWheel2"
+                   android:layout_alignLeft="@id/progressWheel2"
+                   android:layout_alignTop="@id/progressWheel2"
+                   android:layout_alignRight="@id/progressWheel2"
+                   android:layout_alignBottom="@id/progressWheel2"
+                   android:background="@android:color/transparent"
+                   android:text="24%"
+                   android:textColor="@color/progressTextColor"
+                   android:textSize="15sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+               <ProgressBar
+                   android:id="@+id/progressWheel3"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="55dp"
+                   android:layout_height="52dp"
+                   android:max="133"
+                   android:progress="17"
+                   android:secondaryProgress="0"
+                   android:indeterminate="false"
+                   android:progressDrawable="@drawable/environment_arc_progressbar" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="36dp"
+                   android:gravity="center"
+                   android:layout_above="@id/progressWheel3"
+                   android:layout_below="@id/progressWheel3"
+                   android:layout_alignLeft="@id/progressWheel3"
+                   android:layout_alignTop="@id/progressWheel3"
+                   android:layout_alignRight="@id/progressWheel3"
+                   android:layout_alignBottom="@id/progressWheel3"
+                   android:background="@android:color/transparent"
+                   android:text="17%"
+                   android:textColor="@color/progressTextColor"
+                   android:textSize="15sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+               <ProgressBar
+                   android:id="@+id/progressWheel4"
+                   style="?android:attr/progressBarStyleHorizontal"
+                   android:layout_width="55dp"
+                   android:layout_height="52dp"
+                   android:max="133"
+                   android:progress="16"
+                   android:secondaryProgress="0"
+                   android:indeterminate="false"
+                   android:progressDrawable="@drawable/assessment_arc_progressbar" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="36dp"
+                   android:gravity="center"
+                   android:layout_above="@id/progressWheel4"
+                   android:layout_below="@id/progressWheel4"
+                   android:layout_alignLeft="@id/progressWheel4"
+                   android:layout_alignTop="@id/progressWheel4"
+                   android:layout_alignRight="@id/progressWheel4"
+                   android:layout_alignBottom="@id/progressWheel4"
+                   android:background="@android:color/transparent"
+                   android:text="16%"
+                   android:textColor="@color/progressTextColor"
+                   android:textSize="15sp" />
+            </RelativeLayout>
+         </LinearLayout>
+         <com.google.android.material.tabs.TabLayout
+             android:id="@+id/homeTabLayout"
+             android:layout_below="@id/progressCard"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white"
+             app:tabIndicatorHeight="3dp"
+             android:layout_marginBottom="5dp"
+             app:tabIndicatorFullWidth="false"
+             app:tabIndicatorColor="@color/loginButtonColor">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="@color/tabTextColor"
+                android:gravity="center_horizontal"
+                android:text="Attendance"
+                app:tabTextAppearance="@style/CustomTextAppearanceTab"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="@color/tabTextColor"
+                android:gravity="center_horizontal"
+                android:text="Visited" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="@color/tabTextColor"
+                android:gravity="center_horizontal"
+                android:text="Environment"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="#2d353e"
+                android:gravity="center_horizontal"
+                android:text="Assessment"
+                />
+         </com.google.android.material.tabs.TabLayout>
+      </LinearLayout>
+   </androidx.cardview.widget.CardView>
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/fragmentContainer">
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_marginBottom="100dp">
+            <include layout="@layout/attendance_list_card"/>
+            <include layout="@layout/visited_list_card"/>
+            <include layout="@layout/assessment_list_card"/>
+            <include layout="@layout/attendance_list_card"/>
+            <include layout="@layout/visited_list_card"/>
+            <include layout="@layout/assessment_list_card"/>
+         </LinearLayout>
+      </ScrollView>
+
+   </FrameLayout>
+
+   </LinearLayout>
