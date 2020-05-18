@@ -79,7 +79,6 @@
        android:layout_height="wrap_content"
        android:layout_below="@id/visitSchoolCard"
        app:cardCornerRadius="10dp"
-       android:layout_marginBottom="-10dp"
        android:padding="10dp"
        android:layout_marginTop="30dp">
       <LinearLayout
@@ -229,7 +228,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:fontFamily="sans-serif-medium"
                 android:textStyle="normal"
                 android:textColor="@color/tabTextColor"
@@ -240,7 +239,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:fontFamily="sans-serif-medium"
                 android:textStyle="normal"
                 android:textColor="@color/tabTextColor"
@@ -250,7 +249,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:fontFamily="sans-serif-medium"
                 android:textStyle="normal"
                 android:textColor="@color/tabTextColor"
@@ -260,7 +259,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:fontFamily="sans-serif-medium"
                 android:textStyle="normal"
                 android:textColor="#2d353e"
@@ -270,29 +269,8 @@
          </com.google.android.material.tabs.TabLayout>
       </LinearLayout>
    </androidx.cardview.widget.CardView>
-   <FrameLayout
+   <androidx.viewpager.widget.ViewPager
+       android:id="@+id/homeListContainerViewpager"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/fragmentContainer">
-      <ScrollView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content">
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:orientation="vertical"
-             android:layout_marginBottom="100dp">
-            <include layout="@layout/attendance_list_card"/>
-            <include layout="@layout/environment_list_card"/>
-            <include layout="@layout/visited_list_card"/>
-            <include layout="@layout/environment_list_card"/>
-            <include layout="@layout/assessment_list_card"/>
-            <include layout="@layout/attendance_list_card"/>
-            <include layout="@layout/visited_list_card"/>
-            <include layout="@layout/assessment_list_card"/>
-         </LinearLayout>
-      </ScrollView>
-
-   </FrameLayout>
-
+       android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
    </LinearLayout>
